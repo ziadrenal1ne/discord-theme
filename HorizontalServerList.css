@@ -1,0 +1,357 @@
+/* ===========================================
+   VANTA BLACK RED/ORANGE CYBER THEME
+=========================================== */
+
+:root {
+
+    /* Main Colors */
+    --vanta: #040404;
+    --vanta2: #090909;
+    --panel: rgba(8,8,8,.85);
+
+    --red: #ff2d2d;
+    --orange: #ff6a00;
+    --amber: #ff9900;
+
+    --text: #ffffff;
+    --muted: #9c9c9c;
+
+    --glow:
+        0 0 10px rgba(255,50,0,.25),
+        0 0 20px rgba(255,90,0,.15);
+
+    --gradient:
+        linear-gradient(
+            135deg,
+            #ff2d2d,
+            #ff6a00,
+            #ff9500
+        );
+
+    --serverlist-offset: var(--custom-guild-list-width);
+    --notices-height:36px;
+
+}
+
+
+/* ===========================================
+    BACKGROUND
+=========================================== */
+
+body,
+.appMount__51fd7,
+.bg__960e4{
+
+    background:
+        radial-gradient(circle at top,
+        rgba(255,40,0,.08),
+        transparent 45%),
+
+        radial-gradient(circle at bottom,
+        rgba(255,120,0,.05),
+        transparent 45%),
+
+        #050505 !important;
+
+}
+
+
+/* ===========================================
+   SIDEBAR
+=========================================== */
+
+.sidebar__5e434{
+
+    background:rgba(10,10,10,.80)!important;
+
+    backdrop-filter:blur(25px);
+
+    border-right:1px solid rgba(255,80,0,.12);
+
+    box-shadow:
+        inset -1px 0 rgba(255,90,0,.08),
+        var(--glow);
+
+}
+
+
+/* ===========================================
+   SERVER BAR
+=========================================== */
+
+.guilds__5e434{
+
+    background:
+        rgba(4,4,4,.90)!important;
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+}
+
+
+.guilds__5e434:hover{
+
+    box-shadow:
+
+        0 0 30px rgba(255,50,0,.25);
+
+}
+
+
+/* ===========================================
+   SERVER ICONS
+=========================================== */
+
+.wrapper__6e9f8{
+
+    transition:.35s;
+
+}
+
+.wrapper__6e9f8:hover{
+
+    transform:
+        scale(1.15)
+        rotate(4deg);
+
+    filter:
+
+        drop-shadow(0 0 10px #ff3d00)
+        drop-shadow(0 0 20px #ff6a00);
+
+}
+
+
+/* ===========================================
+    CHANNELS
+=========================================== */
+
+.link__2ea32{
+
+    transition:.25s;
+
+    border-radius:12px;
+
+}
+
+.link__2ea32:hover{
+
+    background:
+        rgba(255,80,0,.10)!important;
+
+    box-shadow:
+
+        inset 0 0 0 1px rgba(255,90,0,.20),
+
+        0 0 12px rgba(255,70,0,.20);
+
+}
+
+
+.modeSelected__2ea32 .link__2ea32{
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(255,50,0,.35),
+            rgba(255,120,0,.18)
+        )!important;
+
+}
+
+
+/* ===========================================
+   CHAT
+=========================================== */
+
+.chatContent__5dca8{
+
+    background:
+        linear-gradient(
+            180deg,
+            #050505,
+            #090909
+        );
+
+}
+
+
+/* ===========================================
+   MESSAGE HOVER
+=========================================== */
+
+.message__5126c:hover{
+
+    background:
+
+        rgba(255,90,0,.04)!important;
+
+    transition:.25s;
+
+}
+
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+button{
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    box-shadow:
+
+        0 0 15px rgba(255,60,0,.40);
+
+}
+
+
+/* ===========================================
+   SCROLLBAR
+=========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+        linear-gradient(
+            #ff2d2d,
+            #ff7b00
+        );
+
+    border-radius:999px;
+
+}
+
+
+/* ===========================================
+   GLOWING BORDER
+=========================================== */
+
+.container__9293f,
+.chatContent__5dca8,
+.membersWrap__5d473{
+
+    border:1px solid rgba(255,90,0,.08);
+
+}
+
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:
+            0 0 8px rgba(255,40,0,.15);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 25px rgba(255,80,0,.35);
+
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 8px rgba(255,40,0,.15);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        filter:brightness(1);
+
+    }
+
+    50%{
+
+        filter:brightness(1.18);
+
+    }
+
+    100%{
+
+        filter:brightness(1);
+
+    }
+
+}
+
+@keyframes gradientMove{
+
+    0%{
+
+        background-position:0%;
+
+    }
+
+    100%{
+
+        background-position:100%;
+
+    }
+
+}
+
+
+/* Selected server */
+
+.selected__91a9d{
+
+    animation:
+        glow 2.5s infinite;
+
+}
+
+
+/* Nitro badge, mentions etc */
+
+.numberBadge__40d6f{
+
+    background:
+
+        var(--gradient)!important;
+
+    animation:
+
+        pulse 2s infinite;
+
+}
+
+
+/* ===========================================
+   SMOOTH EVERYTHING
+=========================================== */
+
+*{
+
+    transition:
+        background .25s,
+        color .25s,
+        box-shadow .25s,
+        transform .25s;
+
+}
